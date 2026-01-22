@@ -1,0 +1,69 @@
+import React from 'react';
+
+const Investors = () => {
+  return (
+    <section id="investors" className="py-20 bg-gradient-to-br from-blue-50 to-green-50">
+      <div className="max-w-6xl mx-auto px-6">
+        <div className="text-center mb-16">
+          <h2 className="text-5xl font-bold text-green-800 mb-4">For Investors</h2>
+          <div className="w-24 h-1 bg-green-600 mx-auto mb-6"></div>
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            Turn agriculture into your most rewarding investment
+          </p>
+        </div>
+        
+        <div className="bg-white/80 backdrop-blur-sm p-12 rounded-2xl shadow-xl border border-white/20">
+          <div className="text-center mb-12">
+            <h3 className="text-4xl font-semibold text-green-800 mb-6">Turn Agriculture into Your Most Rewarding Investment 🌱</h3>
+          </div>
+          
+          <div className="grid lg:grid-cols-2 gap-16">
+            <div>
+              <p className="text-xl text-gray-700 leading-relaxed mb-8">
+                Agrowing allows anyone — youth, parents, professionals, even those with no farming knowledge — 
+                to invest easily in real agricultural projects.
+              </p>
+              
+              <div className="bg-gradient-to-r from-blue-500 to-blue-600 p-8 rounded-xl text-white shadow-lg mb-8">
+                <p className="text-xl font-semibold italic">
+                  "Agriculture is not just a sector — it's our heritage and strength. 
+                  Now, anyone can be part of it — digitally and profitably."
+                </p>
+              </div>
+
+              <h4 className="text-2xl font-semibold mb-6 text-green-800">ROI Calculation</h4>
+              <div className="bg-gray-50 p-6 rounded-xl border-l-4 border-green-500">
+                <p className="text-lg text-gray-700">
+                  Returns are determined based on the projected market price (starting from MSP) and the final buyer's purchase value, 
+                  ensuring fair profit sharing between investors and farmers.
+                </p>
+              </div>
+            </div>
+            
+            <div>
+              <h4 className="text-2xl font-semibold mb-8 text-green-800">Why Invest with Agrowing?</h4>
+              <div className="space-y-6">
+                {[
+                  { icon: "📈", title: "Higher ROI", desc: "Better returns than gold or fixed deposits" },
+                  { icon: "⏳", title: "Short Cycles", desc: "Investment cycles linked to crop duration" },
+                  { icon: "🤝", title: "Transparent Tracking", desc: "Monitor projects from seed to sale" },
+                  { icon: "🧾", title: "Secure Distribution", desc: "Automated ROI via escrow system" }
+                ].map((item, index) => (
+                  <div key={index} className="flex items-start p-6 bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-100">
+                    <span className="text-3xl mr-6">{item.icon}</span>
+                    <div>
+                      <h5 className="font-semibold text-xl text-gray-800 mb-2">{item.title}</h5>
+                      <p className="text-gray-600 text-lg">{item.desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Investors;
